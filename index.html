@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">Event<span>Hub</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <button class="nav-btn" onclick="scrollToEvents()">View Events</button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="tagline">PLAN • MANAGE • EXPERIENCE</p>
+        <h1>Manage Your Events<br><span>With Ease</span></h1>
+        <p>Discover exciting events, register easily, and manage your event experience in one place.</p>
+        <button class="primary-btn" onclick="scrollToEvents()">Explore Events</button>
+    </div>
+    <div class="hero-card">
+        <div class="calendar-icon">📅</div>
+        <h3>Upcoming Events</h3>
+        <p>Workshops • Conferences • Cultural Events</p>
+    </div>
+</section>
+
+<section id="events" class="events-section">
+    <div class="section-heading">
+        <p>UPCOMING EVENTS</p>
+        <h2>Find Your Next Event</h2>
+        <span>Browse and register for events that interest you.</span>
+    </div>
+
+    <div class="event-container">
+        <div class="event-card">
+            <div class="event-image tech">💻</div>
+            <div class="event-content">
+                <span class="event-category">TECHNOLOGY</span>
+                <h3>AI & Technology Summit</h3>
+                <p>Explore the latest developments in Artificial Intelligence and technology.</p>
+                <div class="event-info">
+                    <span>📅 Oct 15, 2026</span>
+                    <span>📍 Chennai</span>
+                </div>
+                <button class="register-btn" onclick="registerEvent('AI & Technology Summit')">Register</button>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-image business">🚀</div>
+            <div class="event-content">
+                <span class="event-category">BUSINESS</span>
+                <h3>Startup Innovation Meet</h3>
+                <p>Connect with entrepreneurs and learn about startup innovation.</p>
+                <div class="event-info">
+                    <span>📅 Oct 22, 2026</span>
+                    <span>📍 Coimbatore</span>
+                </div>
+                <button class="register-btn" onclick="registerEvent('Startup Innovation Meet')">Register</button>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-image cultural">🎭</div>
+            <div class="event-content">
+                <span class="event-category">CULTURAL</span>
+                <h3>College Cultural Fest</h3>
+                <p>Enjoy music, dance, art and exciting cultural performances.</p>
+                <div class="event-info">
+                    <span>📅 Nov 05, 2026</span>
+                    <span>📍 Madurai</span>
+                </div>
+                <button class="register-btn" onclick="registerEvent('College Cultural Fest')">Register</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <div>
+        <p class="small-title">ABOUT EVENTHUB</p>
+        <h2>Simple Event Management for Everyone</h2>
+        <p>EventHub is a simple event management system that helps users discover upcoming events and register for them quickly.</p>
+    </div>
+
+    <div class="features">
+        <div class="feature"><div>🔎</div><h3>Discover</h3><p>Find upcoming events easily.</p></div>
+        <div class="feature"><div>📝</div><h3>Register</h3><p>Register for events with one click.</p></div>
+        <div class="feature"><div>⚡</div><h3>Manage</h3><p>Manage event information efficiently.</p></div>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">Event<span>Hub</span></div>
+    <p>© 2026 EventHub. Event Management System.</p>
+</footer>
+
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h2>Event Registration</h2>
+        <p id="selectedEvent"></p>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="email" id="email" placeholder="Enter your email">
+        <button class="primary-btn" onclick="submitRegistration()">Confirm Registration</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
